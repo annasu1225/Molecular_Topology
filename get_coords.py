@@ -24,10 +24,10 @@ def get_p_coords(rna_structure):
             p_coords.append((x, y, z))
     return p_coords
 
-def get_ca_coords(protein_structure):
+def get_ca_coords(protein_structure, chain):
     ca_coords = []
     for line in protein_structure.splitlines():
-        if line.startswith("ATOM") and "CA" in line[13:15]:
+        if line.startswith("ATOM") and "CA" in line[13:15] and line[21:22] == chain:
             parts = line.split()
             x = float(line[30:38].strip())
             y = float(line[38:46].strip())
@@ -38,6 +38,7 @@ def get_ca_coords(protein_structure):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Get backbone coordinates from PDB")
     parser.add_argument("--pdb_id", help="PDB ID")
+    parser.add_argument("--chain", help="Chain identifier for protein (required if type is protein)")
     parser.add_argument("--pdb_file", help="Path to local PDB file (optional)")
     parser.add_argument("--type", choices=["rna", "protein"], help="Type of structure to extract coordinates from")
     args = parser.parse_args()
@@ -46,6 +47,7 @@ if __name__ == "__main__":
         with open(args.pdb_file, "r") as f:
             structure = f.read()
             protein_name = args.pdb_file.split("/")[-1].split(".")[0]
+            chain = args.chain if args.chain else "A"
     else:
         protein_name = args.pdb_id
         structure = get_pdb(protein_name)
@@ -53,7 +55,7 @@ if __name__ == "__main__":
     if args.type == "rna":
         coords = get_p_coords(structure)
     else:
-        coords = get_ca_coords(structure)
+        coords = get_ca_coords(structure, chain)
 
     with open(f"{protein_name}_{args.type}_coords.txt", "w") as f:
         for coord in coords:
