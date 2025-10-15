@@ -43,11 +43,12 @@ if __name__ == "__main__":
     parser.add_argument("--type", choices=["rna", "protein"], help="Type of structure to extract coordinates from")
     args = parser.parse_args()
 
+    chain = args.chain if args.chain else "A"
+    
     if args.pdb_file:
         with open(args.pdb_file, "r") as f:
             structure = f.read()
             protein_name = args.pdb_file.split("/")[-1].split(".")[0]
-            chain = args.chain if args.chain else "A"
     else:
         protein_name = args.pdb_id
         structure = get_pdb(protein_name)
