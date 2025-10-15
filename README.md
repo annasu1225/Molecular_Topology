@@ -37,16 +37,14 @@
   <h3 align="center">Molecular Topology</h3>
 
   <p align="center">
-    This projects uses <a href="https://knotplot.com/">KnotPlot</a> to study molecular topology such as knotted DNAs and proteins.  
-    <br />
-    <a href="https://raw.githubusercontent.com/annasu1225/Molecular_Topology/main/protein_demo.mp4" title="Watch the demo">
-      <img src="https://raw.githubusercontent.com/annasu1225/Molecular_Topology/main/protein_demo.png" alt="Do you think this protein is knotted? Watch the video to find out!" />
-    </a>
-    
+    This projects uses <a href="https://knotplot.com/">KnotPlot</a> to study molecular topology such as knotted DNAs and proteins. 
+    <br>
+    <br>
+    Do you think this protein is knotted? Play the video to find out!
   </p>
 </div>
 
-
+https://github.com/user-attachments/assets/bdd7aa07-1528-4769-bd69-5d67f776a6c6
 
 <!-- TABLE OF CONTENTS -->
 <details>
