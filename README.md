@@ -41,9 +41,7 @@
   </p>
 </div>
 
-[![Watch the video](https://raw.githubusercontent.com/annasu1225/Molecular_Topology/main/protein_demo.png)](https://raw.githubusercontent.com/annasu1225/Molecular_Topology/main/protein_demo.mp4)
-
-
+https://github.com/user-attachments/assets/bdd7aa07-1528-4769-bd69-5d67f776a6c6
 
 <!-- TABLE OF CONTENTS -->
 <details>
