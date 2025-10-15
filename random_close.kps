@@ -7,7 +7,7 @@ mode cb
 cyl-rad = 0.2
 scale = 0.15
 
-load trefoil_protein_coords.txt
+load data/trefoil_protein_coords.txt
 centre mass   % move centre of mass to (0,0,0)
 open all
 save |k    % save to an internal buffer
