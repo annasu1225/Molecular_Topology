@@ -37,9 +37,11 @@
   <h3 align="center">Molecular Topology</h3>
 
   <p align="center">
-    This projects uses [KnotPlot](https://knotplot.com/) to study molecular topology such as knotted DNAs and proteins. 
+    This projects uses <a href="https://knotplot.com/">KnotPlot</a> to study molecular topology such as knotted DNAs and proteins.  
     <br />
-    [![Do you think this protein is knotted? Watch the video to find out!](https://github.com/annasu1225/Molecular_Topology/blob/main/protein_demo.png)](https://github.com/annasu1225/Molecular_Topology/blob/main/protein_demo.mp4)
+    <a href="https://raw.githubusercontent.com/annasu1225/Molecular_Topology/main/protein_demo.mp4" title="Watch the demo">
+      <img src="https://raw.githubusercontent.com/annasu1225/Molecular_Topology/main/protein_demo.png" alt="Do you think this protein is knotted? Watch the video to find out!" />
+    </a>
     
   </p>
 </div>
@@ -83,9 +85,9 @@ This repo contains python scripts (.py) and KnotPlot scripts (.kps) for studying
 
 ### Dependencies
 
-Download KnotPlot at (https://knotplot.com/download/)[https://knotplot.com/download/] 
+Download KnotPlot: [https://knotplot.com/download/](https://knotplot.com/download/)
 
-See manual at (https://knotplot.com/doc/KnotPlot-Manual.pdf)[https://knotplot.com/doc/KnotPlot-Manual.pdf]
+See the KnotPlot manual: [KnotPlot Manual (PDF)](https://knotplot.com/doc/KnotPlot-Manual.pdf)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,19 +95,19 @@ See manual at (https://knotplot.com/doc/KnotPlot-Manual.pdf)[https://knotplot.co
 
 1. Run `get_coords.py` to get the 3D coordinates of your molecular structure 
 Case 1: Input your PDB file
-'''
+```
 python get_coords.py --pdb_file data/trefoil_protein.pdb --type protein
-'''
+```
 Case 2: Input a PDB ID
-'''
-python get_coords.py --pdb_id 1yrl --type protein
-'''
+```
+python get_coords.py --pdb_id 1yrl --chain A --type protein
+```
 2. Add the coordinates txt file to `random_close.kps` to load the structure
 3. Open KnotPlot from launch-KnotPlot-here
 4. In the command window of KnotPlot, run `random_close.kps`
-'''
+```
 < random_close.kps
-'''
+```
 5. In the control panel, check energy, euler, acn, rog to display these parameters in the Arena
 6. Click `go` in the Control Panel
 7. Click `dbeads` in the Control Panel
