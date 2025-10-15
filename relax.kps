@@ -1,0 +1,34 @@
+% This script was written under the guidance of Rob Scharein
+% input: a txt document with the x,y,z coordinates of a molecular structure
+% Feature: randomly closes the molecular chain
+
+reset all
+mode cb
+cyl-rad = 0.2
+scale = 0.15
+
+load generated_protein_coords.txt
+centre mass   % move centre of mass to (0,0,0)
+open all
+save |k    % save to an internal buffer
+
+% alias `~closerandomly' does the following:
+% turns off any relaxation `go 0'
+% redraw the Control Panel
+% load the open knot from the internal buffer
+% project the knot in a random direction
+% add a bead at location (20, 20, 20)
+% close the knot
+% check for safeness
+alias ~closerandomly "go 0;reset sliders;load |k;project random;addbead 20 20 20;close all;safe"
+
+txt font 3
+txt fill on
+txt fcolour "Royal Blue" .7
+% clicking on the following button executes the alias
+txt c 30 "new closure" ~closerandomly
+txt on
+
+dstep = 3     % speed up the drawing a bit
+stusplit = 1  % split stuck edges 
+fixcofm = t   % keep centre of mass at (0, 0, 0)
