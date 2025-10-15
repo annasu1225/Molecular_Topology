@@ -1,0 +1,9 @@
+% Simple script for loading moleculr coordinates, centering in Arena window, opening all closed ends, and performing computations 
+
+load data/1AL1_protein_coords.txt
+centre
+open all
+
+euler
+acn
+rog
