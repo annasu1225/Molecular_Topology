@@ -37,7 +37,10 @@
   <h3 align="center">Molecular Topology</h3>
 
   <p align="center">
-    This projects uses <a href="https://knotplot.com/">KnotPlot</a> to study molecular topology such as knotted DNAs and proteins.  
+    This projects uses <a href="https://knotplot.com/">KnotPlot</a> to study molecular topology such as knotted DNAs and proteins. 
+    <br>
+    <br>
+    Do you think this protein is knotted? Play the video to find out!
   </p>
 </div>
 
